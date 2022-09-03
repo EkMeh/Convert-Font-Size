@@ -4,7 +4,7 @@ from distutils.cmd import Command
 from distutils.command.config import config
 from re import X
 import tkinter as tk
-from tkinter import ttk
+from tkinter import Place, ttk
 from webbrowser import get
 
 def ConvertValues():
@@ -32,10 +32,13 @@ global combobox
 global comboboxC
 global btn
 root.title('FontSizeConvert')
-root.geometry('600x400+50+50')
+root.geometry('600x180+50+50')
 root.resizable(False, False)
 root.iconbitmap('./src/logo.ico')
 root.configure(background='#D5F5E3')
+# Create label for titile program code 
+label4=tk.Label(root,text='Convert Font Size - Small Project'+"'"+'s Part 1',bg='#D5F5E3', font='bold 14 bold')
+label4.place(x=100,y=10)
 # Create Label 
 label1=tk.Label(root, text="Type the value for the font size")
 label1.place(x=10, y=50)
